@@ -1,0 +1,24 @@
+{
+  "name": "sass-to-json",
+  "version": "1.0.0",
+  "homepage": "https://github.com/malyw/sass-to-json",
+  "authors": [
+    {
+      "name": "Sergey Gospodarets",
+      "homepage": "http://blog.gospodarets.com/"
+    }
+  ],
+  "description": "API to read Sass variables from JavaScript",
+  "keywords": [
+    "sass",
+    "scss",
+    "json",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".gitignore",
+    "node_modules",
+    "bower_components"
+  ]
+}
