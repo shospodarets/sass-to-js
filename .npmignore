@@ -1,7 +1,9 @@
+.idea
 node_modules
 test
 .gitignore
 .npmignore
 Gruntfile.js
+*.iml
 
 bower.json
