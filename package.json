@@ -1,7 +1,7 @@
 {
   "title": "sass-to-js",
   "name": "sass-to-js",
-  "version": "1.0.6",
+  "version": "1.0.6-2",
   "description": "API to read Sass variables from JavaScript",
   "scripts": {
     "test": "grunt test"
