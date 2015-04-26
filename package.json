@@ -1,6 +1,6 @@
 {
-  "title": "sass-to-json",
-  "name": "sass-to-json",
+  "title": "sass-to-js",
+  "name": "sass-to-js",
   "version": "1.0.0",
   "description": "API to read Sass variables from JavaScript",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/malyw/sass-to-json"
+    "url": "https://github.com/malyw/sass-to-js"
   },
   "keywords": [
     "sass",
@@ -19,12 +19,17 @@
   "author": "Sergey Gospodarets",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/malyw/sass-to-json/issues"
+    "url": "https://github.com/malyw/sass-to-js/issues"
   },
-  "homepage": "https://github.com/malyw/sass-to-json",
+  "homepage": "https://github.com/malyw/sass-to-js",
   "devDependencies": {
+    "angular": "^1.3.15",
     "grunt": "^0.4.5",
+    "grunt-contrib-jasmine": "^0.8.2",
+    "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-sass": "^0.18.1"
+    "grunt-sass": "^0.18.1",
+    "jquery": "^2.1.3",
+    "load-grunt-tasks": "^3.1.0"
   }
 }

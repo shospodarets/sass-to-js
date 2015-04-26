@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>sass-to-js test example</title>
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32"/>
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+
+<img src="img/sass-to-js.svg" width="300"/>
+
+<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+<script src="../js/dist/sass-to-js.min.js"></script>
+<script src="jasmine/helpers/set-global-variable-from-libraries.js"></script>
+<script>
+    setGlobalVariableFromLibraries();
+    /* TEST IN BROWSER */
+    var pureJsJson = sassToJs(document.body);
+    var jQueryJson = $(document.body).sassToJs();
+    var angularJson = angular.element(document.body).sassToJs();
+    if (
+            JSON.stringify(pureJsJson) === JSON.stringify(jQueryJson) &&
+            JSON.stringify(pureJsJson) === JSON.stringify(angularJson)
+    ) {
+        console.log('All JSON objects are identical');
+    } else {
+        console.error('Not all JSON objects are identical');
+    }
+</script>
+</body>
+</html>

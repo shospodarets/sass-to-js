@@ -1,7 +1,7 @@
 {
-  "name": "sass-to-json",
+  "name": "sass-to-js",
   "version": "1.0.0",
-  "homepage": "https://github.com/malyw/sass-to-json",
+  "homepage": "https://github.com/malyw/sass-to-js",
   "authors": [
     {
       "name": "Sergey Gospodarets",
@@ -17,8 +17,12 @@
   ],
   "license": "MIT",
   "ignore": [
-    ".gitignore",
     "node_modules",
-    "bower_components"
+    "test",
+    ".gitignore",
+    ".npmignore",
+    "Gruntfile.js",
+
+    "package.json"
   ]
 }

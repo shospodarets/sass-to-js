@@ -1,0 +1,85 @@
+@import "../../sass/sass-to-js";
+
+// TEST DATA
+
+$stringsMap: (
+        stringWithQuotes: 'string',
+        stringWithDoubleQuotes: "string",
+        stringWithoutQuotes: string,
+        stringTrue: "true",
+        stringFalse: "false",
+        pixels: 480px, // internal Sass data-type is "number"
+        percents: 4% // internal Sass data-type is "number"
+);
+
+$colorMap: (
+        colorHexShort: #f00,
+        colorHex: #ff0000,
+        colorRgba: rgba(255, 0, 0, 0.5),
+);
+
+$numberMap: (
+        int: 10,
+        positiveNum: 04.7,
+        negativeNum: -43.670
+);
+
+$othersMap: (
+        boolean: true,
+        nulls: null
+);
+
+$mapOfMaps: (
+        map: (prop1: 1, prop2: 2, prop3: 3),
+        map-nested: (prop1: (prop2: 1 2 (prop3: test))),
+        map-full: (prop1: (1 2 (prop12 : 1)), prop2: (#ff0, false, (prop21: 1, prop22: string2)), prop3: (2 3 4 string3))
+);
+
+$listMap: (
+        numbers: 1 2 3,
+        strings: string1 string2,
+        booleans: true false,
+        cssValuesList: 1.5em 1em 0 2em,
+        listCommaSeparated: ("item-1", "item-2", "item-3"),
+        withPodLists: (1px 2px) (5px 6px),
+        nestedList: (a b (c d e (f g) h) i)
+);
+
+// COMMON TEST OBJECTS
+$testValues: (
+        stringsMap: $stringsMap,
+        colorMap: $colorMap,
+        numberMap: $numberMap,
+        othersMap: $othersMap,
+        mapOfMaps: $mapOfMaps,
+        listMap: $listMap
+);
+
+$cssElementValues: (
+        element: 'element'
+);
+
+$cssGeneratedValues: (
+        pseudoEl: 'pseudoEl'
+);
+
+// CSS OUTPUT
+// for each element in the tested Sass map
+// create style for HTML element with the same name of class
+@each $testName, $value in $testValues {
+  .#{$testName} {
+    font-family: sassToJs($value);
+    content: sassToJs($cssElementValues);
+
+    &:before {
+      content: sassToJs($cssGeneratedValues);
+    }
+  }
+}
+
+// to make the test Sass map available
+// pass it via "body" CSS
+body {
+  font-family: sassToJs($testValues); // to get $testValues in tests
+  margin: 0; // for one of tests
+}
