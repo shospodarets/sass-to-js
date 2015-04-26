@@ -7,10 +7,6 @@ install:
 - npm install
 before_script:
 - grunt build
-branches:
-  only:
-  - master
-  - dev
 deploy:
   provider: npm
   email: sgospodarets@gmail.com
