@@ -1,5 +1,9 @@
 # sass-to-js
 
+[![Build Status](https://travis-ci.org/malyw/sass-to-js.svg?branch=master)](https://travis-ci.org/malyw/sass-to-js)
+[![npm version](https://badge.fury.io/js/sass-to-js.svg)](http://badge.fury.io/js/sass-to-js)
+[![devDependency Status](https://david-dm.org/malyw/sass-to-js/dev-status.png)](https://david-dm.org/malyw/sass-to-js/dev-status.png)
+
 **sass-to-js** is API to read Sass variables from JavaScript.
 
 It provides Sass methods to save Sass maps and list as JSON to CSS and
@@ -39,4 +43,4 @@ demo + codepen
 
 MIT
 
-ToDo: Travis test
+![logo](http://imgh.us/sass-to-js_1.svg)
