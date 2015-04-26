@@ -9,6 +9,10 @@
     }
   ],
   "description": "API to read Sass variables from JavaScript",
+  "main": [
+    "js/dist/sass-to-js.min.js",
+    "sass/_sass-to-js.scss"
+  ],
   "keywords": [
     "sass",
     "scss",
@@ -22,7 +26,6 @@
     ".gitignore",
     ".npmignore",
     "Gruntfile.js",
-
     "package.json"
   ]
 }
