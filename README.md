@@ -179,7 +179,7 @@ $(testEl)
 
 ### Demo
 
-[Passing data from CSS to JS demo](http://blog.gospodarets.com/demos/data-from-sass-to-js/)
+[Passing data from Sass to JS demo](http://blog.gospodarets.com/demos/data-from-sass-to-js/)
 
 ### Codepen
 
