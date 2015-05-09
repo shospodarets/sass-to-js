@@ -12,7 +12,7 @@ JavaScript helpers to read those strings from CSS to JavaScript objects.
 
 It requires **no dependencies** and has [nice Code Coverage with Tests](https://github.com/malyw/sass-to-js/tree/master/test/jasmine/specs)!
 
-Library provides utils functions `sassToJs` for both Sass and JavaScript.
+Tested and works in all browsers up-to IE9 (including).
 
 ## Usage examples
 
@@ -22,7 +22,7 @@ You can use it e.g. for passing data from Sass to JS like:
 * some variables values (e.g. theme colors, dimensions etc.)
 * list of variable values which might be applied in some circumstances (for example, columns count for different types of devices)
 * to test your Sass code/framework with JavaScript
-* to prevent providing same variables in Sass and JavaScript (as described in [sass-to-js article](http://blog.gospodarets.com/) ToDo link)
+* to prevent providing same variables in Sass and JavaScript (as described in [sass-to-js article](http://blog.gospodarets.com/) ToDo article link)
 
 ## Install
 
@@ -53,25 +53,9 @@ Import `sass/_sass-to-js.scss` library file:
 After that you can pass any your Sass maps or lists variables to util function `sassToJs`. Examples:
 
 ```sass
-$mediaBreakPoints: (
-  small-min: 768px,
-  extra-small: 767px,
-  medium-min: 992px,
-  small-max: 991px,
-  large-min: 1200px,
-  medium-max: 1199px
-);
-
 .breakpoints-data{
   font-family: sassToJs($mediaBreakPoints);
 }
-
-$colorMap: (
-  colorHexShort: #f00,
-  colorHex: #ff0000,
-  colorRgba: rgba(255, 0, 0, 0.5),
-  blackGradations: ('#000', '#111', '#222')
-);
 
 .colors-data{
   &:before{
@@ -92,19 +76,18 @@ It might be added via `<script/>` tag:
 <script src="sass-to-js/js/dist/sass-to-js.min.js"></script>
 ```
 
-as CommonJS module:
+as **CommonJS module**:
 
 ```js
 var sassToJs = require('sass-to-js/js/dist/sass-to-js.min.js');
 ```
 
-or AMD module:
+or **AMD module**:
 
 ```js
 require([
     'sass-to-js/js/dist/sass-to-js.min'
 ], function (sassToJs) {
-
 });
 ```
 
@@ -135,8 +118,7 @@ function sassToJs(element, params) {
 
 Variations of usage:
 
-1. **Without `params` Object** library will read "font-family" property and try to parse it as JSON
-Example:
+* **Without `params` Object** library reads elements "font-family" CSS property and tries to parse it as JSON.
 
 ```js
 sassToJs(
@@ -144,7 +126,7 @@ sassToJs(
 );
 ```
 
-2. **`params.pseudoEl`**- sets that JSON has to read from CSS generated content inside of element:
+* **`params.pseudoEl`**- sets that JSON has to read from CSS generated content inside of element:
 
 ```js
 sassToJs(
@@ -155,7 +137,7 @@ sassToJs(
 );
 ```
 
-3. **Providing `params.cssProperty`** - in this string param you can set from which CSS property has to read JSON
+* **`params.cssProperty`** - in this string param you can set from which CSS property has to read JSON:
 
 ```js
 sassToJs(
@@ -167,7 +149,8 @@ sassToJs(
 );
 ```
 
-4. **`params.debug`**- as expected, adds logging parsing etc. error to developer console.
+* **`params.debug`**- as expected, adds logging parsing etc. error to developer console.
+
 Otherwise library doesn't trigger errors and just returns empty Object `{}` as result of its call.
 
 ### AngularJS/jQuery support
@@ -190,18 +173,26 @@ $(testEl)
 
 ## Links and demos
 
-### Article
-ToDo link to article
+### Article with description
+ToDo article link
 
 ### Demo
-ToDo demo
+
+[Passing data from CSS to JS demo](http://blog.gospodarets.com/demos/data-from-css-to-js/)
 
 ### Codepen
 
 It's possible to use the library on Codepen when you use [sass-to-js Pen](http://codepen.io/malyw/pen/zGxodr)
 as [External Resource](http://blog.codepen.io/2013/05/28/new-feature-use-pens-as-external-resources/).
 
-Example: [Sass-to-json demo](http://codepen.io/malyw/pen/zGxodr).
+Example: [Sass-to-js demo](http://codepen.io/malyw/pen/zGxodr).
+
+## Run the build and tests
+
+```bash
+npm install
+grunt
+```
 
 ## License
 
