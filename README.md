@@ -6,19 +6,18 @@
 
 **sass-to-js** is a Library to easily pass Sass variables via CSS to JavaScript.
 
-It provides Sass methods to save Sass maps and list as JSON to CSS and
-
-JavaScript helpers to read those strings from CSS to JavaScript objects.
+It provides Sass methods to save Sass values as JSON to CSS and
+JavaScript helpers to read them from CSS to JavaScript objects.
 
 It requires **no dependencies** and has [nice Code Coverage with Tests](https://github.com/malyw/sass-to-js/tree/master/test/jasmine/specs)!
 
-Tested and works in all browsers up-to IE9 (including).
+sass-to-js has been tested and works in all modern browsers and IE9+.
 
 ## Usage examples
 
 You can use it e.g. for passing data from Sass to JS like:
 
-* media breakpoints list to reuse in JavaScript/HTML (like in [responsive image solutions](https://css-tricks.com/making-sass-talk-to-javascript-with-json/))
+* media breakpoints maps to reuse in JavaScript/HTML (like in [responsive image solutions](https://css-tricks.com/making-sass-talk-to-javascript-with-json/))
 * some variables values (e.g. theme colors, dimensions etc.)
 * list of variable values which might be applied in some circumstances (for example, columns count for different types of devices)
 * to test your Sass code/framework with JavaScript
@@ -50,7 +49,7 @@ Import `sass/_sass-to-js.scss` library file:
 @import "sass-to-js/sass/sass-to-js";
 ```
 
-After that you can pass any your Sass maps or lists variables to util function `sassToJs`. Examples:
+After that you can pass any your Sass maps variables to util function `sassToJs`. Examples:
 
 ```sass
 .breakpoints-data{
@@ -60,10 +59,22 @@ After that you can pass any your Sass maps or lists variables to util function `
 .colors-data{
   &:before{
     content: sassToJs($colorMap);
-    display: none;
   }
 }
 ```
+
+Also you can pass "simple" (string/color/bool/null/number/list) or
+"complex" (maps) Sass values using the following syntax:
+
+```scss
+$zoomStep: 3;
+
+&:after {
+  content: sassToJs("maxZoomStep", $zoomStep);
+  font-family: sassToJs("colors", $colorMap);
+}
+```
+
 
 ### JS
 
@@ -167,7 +178,7 @@ angular.element(htmlEl)
 #### jQuery
 
 ```js
-$(testEl)
+$(htmlEl)
     .sassToJs({pseudoEl: '::before', cssProperty: 'content'});
 ```
 
@@ -188,7 +199,7 @@ as [External Resource](http://blog.codepen.io/2013/05/28/new-feature-use-pens-as
 
 Example: [Sass-to-js demo](http://codepen.io/malyw/pen/zGxodr).
 
-## Run the build and tests
+## Run the build, tests and watch
 
 ```bash
 npm install

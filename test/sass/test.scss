@@ -74,6 +74,12 @@ $cssGeneratedValues: (
     &:before {
       content: sassToJs($cssGeneratedValues);
     }
+
+    // with property name
+    &:after {
+      content: sassToJs("testName", $testName);
+      font-family: sassToJs("value", $value);
+    }
   }
 }
 
