@@ -18,6 +18,7 @@
   ],
   "author": "Sergey Gospodarets",
   "license": "MIT",
+  "main": "js/dist/sass-to-js.min.js",
   "bugs": {
     "url": "https://github.com/malyw/sass-to-js/issues"
   },
