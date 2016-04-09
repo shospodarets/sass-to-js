@@ -26,7 +26,7 @@
   @if ($value == null) {
     $value: $propName; // emulates sassToJs($value)
   } @else {
-    @return '{#{sassToJs($propName)}:#{sassToJs($value)}}'; // returns {'propName': sassToJs($value)}
+    @return '{"#{sassToJs($propName)}":#{sassToJs($value)}}'; // returns {"propName": sassToJs($value)}
   }
 
   //--- VARS ---

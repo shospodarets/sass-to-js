@@ -3,3 +3,4 @@ node_modules
 
 # generated
 /test/css
+npm-debug.log

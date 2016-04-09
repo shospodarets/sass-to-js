@@ -53,7 +53,8 @@ module.exports = function (grunt) {
                 ],
                 helpers: '<%= paths.test %>/jasmine/helpers/**/*.js',
                 styles: '<%= paths.test %>/css/**/*.css',
-                specs: '<%= paths.test %>/jasmine/specs/**/*.js'
+                specs: '<%= paths.test %>/jasmine/specs/**/*.js',
+                outfile: 'node_modules/grunt-contrib-jasmine/_SpecRunner.html'
             }
         },
 

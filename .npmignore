@@ -3,6 +3,7 @@ node_modules
 test
 .gitignore
 .npmignore
+npm-debug.log
 Gruntfile.js
 *.iml
 

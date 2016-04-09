@@ -1,6 +1,6 @@
 {
   "name": "sass-to-js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://github.com/malyw/sass-to-js",
   "authors": [
     {
@@ -26,6 +26,7 @@
     ".gitignore",
     ".npmignore",
     "Gruntfile.js",
-    "package.json"
+    "package.json",
+    "npm-debug.log"
   ]
 }
