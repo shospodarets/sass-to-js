@@ -1,11 +1,8 @@
 {
   "title": "sass-to-js",
   "name": "sass-to-js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Library to pass Sass variables via CSS to JavaScript",
-  "scripts": {
-    "test": "grunt test"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/malyw/sass-to-js"
