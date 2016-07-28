@@ -74,7 +74,7 @@ module.exports = function (grunt) {
             options: {
                 banner: '' +
                 '//! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-                '//! author : Sergey Gospodarets\n' +
+                '//! author : Sergey Hospodarets\n' +
                 '//! license : MIT\n' +
                 '//! https://github.com/malyw/sass-to-js\n'
             },

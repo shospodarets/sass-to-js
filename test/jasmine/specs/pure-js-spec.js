@@ -26,8 +26,8 @@ describe("Getting JSON using pure JavaScript", function () {
     });
 
     // Testing sassToJs($propName, $value);
-    it("shouldn convert CSS to JSON from provided CSS property in CSS generated element" +
-    "Sass string value for which was provided with property name", function () {
+    it("shouldn convert CSS to JSON from provided CSS property in CSS generated element," +
+    " Sass string value for which was provided with property name", function () {
         var testEl = getHtmlElementToTest();
 
         expect(
@@ -38,8 +38,8 @@ describe("Getting JSON using pure JavaScript", function () {
         );
     });
 
-    it("shouldn convert CSS to JSON from provided CSS property in CSS generated element" +
-    "Sass complex value for which was provided with property name", function () {
+    it("shouldn convert CSS to JSON from provided CSS property in CSS generated element," +
+    " Sass complex value for which was provided with property name", function () {
         var testEl = getHtmlElementToTest();
 
         expect(

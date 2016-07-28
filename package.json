@@ -1,7 +1,7 @@
 {
   "title": "sass-to-js",
   "name": "sass-to-js",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Library to pass Sass variables via CSS to JavaScript",
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
     "json",
     "javascript"
   ],
-  "author": "Sergey Gospodarets",
+  "author": "Sergey Hospodarets",
   "license": "MIT",
   "main": "js/dist/sass-to-js.min.js",
   "bugs": {
@@ -24,15 +24,17 @@
     "angular": "~1.5.3",
     "grunt": "~1.0.1",
     "grunt-contrib-jasmine": "~1.0.3",
-    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-uglify": "~2.0.0",
     "grunt-contrib-watch": "~1.0.0",
-    "grunt-sass": "~1.1.0",
-    "jquery": "~2.2.3",
+    "grunt-sass": "~1.2.0",
+    "jquery": "~3.1.0",
     "load-grunt-tasks": "~3.5.0",
     "es5-shim": "~4.5.8"
   },
   "scripts": {
-    "test": "grunt test",
+    "test": "npm run grunt -- test",
+    "watch": "npm run grunt -- watch",
+    "build": "npm run grunt -- build",
     "grunt": "grunt"
   }
 }
