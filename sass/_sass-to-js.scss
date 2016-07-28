@@ -46,7 +46,7 @@
     // NUMBER
   } @else if ($valueType == 'number') {
     // '100px' has also type "number" but after multiplying to "0" gives "0px"
-    @if ('#{$value*0}' == '0') {
+    @if (unitless($value)) {
       // e.g. 100
       $jsonPropValue: $value;
     } @else {

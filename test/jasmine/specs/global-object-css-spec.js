@@ -12,6 +12,24 @@ describe("Test getting JSON from <body/> CSS", function () {
         );
     });
 
+    it("should get expected strings from global element", function () {
+        // this test expects that browser keeps the order
+        // of the properties in Object (it's not guaranteed according the JS spec)
+        var expected = {"stringWithQuotes": "string", "stringWithDoubleQuotes": "string", "stringWithoutQuotes": "string", "stringTrue": "true", "stringFalse": "false", "pixels": "480px", "percents": "4%"};
+
+        expect(
+            JSON.stringify(
+                sassToJs(document.body).stringsMap
+            )
+        )
+            .toBe(
+            JSON.stringify(
+                expected
+            )
+        );
+
+    });
+
     it("shouldn get expected complex JSON object from global element", function () {
         // this test expects that browser keeps the order
         // of the properties in Object (it's not guaranteed according the JS spec)
