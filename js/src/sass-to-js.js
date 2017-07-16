@@ -94,8 +94,8 @@
     var exported = false;
 
     if (typeof window.jQuery === 'function') {
-        $.fn.sassToJs = sassToJsForLibrary;
-        $.fn.sassToJsOriginal = sassToJs;
+        jQuery.fn.sassToJs = sassToJsForLibrary;
+        jQuery.fn.sassToJsOriginal = sassToJs;
         exported = true;
     }
 
