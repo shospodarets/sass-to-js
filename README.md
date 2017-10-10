@@ -211,4 +211,4 @@ npm run grunt
 
 MIT
 
-[![logo](http://imgh.us/sass-to-js_1.svg)](http://blog.hospodarets.com/passing_data_from_sass_to_js)
+[![logo](https://i.imgur.com/e2Npbpf.gif)](http://blog.hospodarets.com/passing_data_from_sass_to_js)
