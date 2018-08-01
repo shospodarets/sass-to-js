@@ -75,7 +75,7 @@
      * @returns {String} Normalized for JSON.stringify CSS value string
      */
     function _normalizeCssValue(string) {
-        string = string.replace(/^['"]+|\s+|\\|(;\s?})+|['"]$/g, '');
+        string = string.replace(/^['"]+|\\|(;\s?})+|['"]$/g, '');
 
         return string;
     }
