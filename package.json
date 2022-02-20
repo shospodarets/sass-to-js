@@ -13,7 +13,11 @@
     "json",
     "javascript"
   ],
-  "author": "Sergey Hospodarets",
+  "author": {
+    "name": "Serg Hospodarets",
+    "email": "shospodarets@gmail.com",
+    "url": "https://hospodarets.com/"
+  },
   "license": "MIT",
   "main": "js/dist/sass-to-js.min.js",
   "bugs": {
@@ -21,15 +25,16 @@
   },
   "homepage": "https://github.com/malyw/sass-to-js",
   "devDependencies": {
-    "angular": "~1.5.3",
-    "grunt": "~1.0.1",
-    "grunt-contrib-jasmine": "~1.0.3",
-    "grunt-contrib-uglify": "~2.0.0",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-sass": "~1.2.0",
-    "jquery": "~3.1.0",
-    "load-grunt-tasks": "~3.5.0",
-    "es5-shim": "~4.5.8"
+    "angular": "^1.8.2",
+    "es5-shim": "^4.6.5",
+    "grunt": "^1.4.1",
+    "grunt-contrib-jasmine": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "jquery": "^3.6.0",
+    "load-grunt-tasks": "^5.1.0",
+    "node-sass": "^7.0.1"
   },
   "scripts": {
     "test": "npm run grunt -- test",

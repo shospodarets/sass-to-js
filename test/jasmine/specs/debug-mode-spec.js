@@ -29,7 +29,7 @@ describe("Debug mode test", function () {
     it("should throw an error when there isn't CSS value for property and return an empty object", function () {
         var params = {'cssProperty': 'stringMap', debug: true};
         var json = sassToJs(document.body, params);
-        expect(console.error).toHaveBeenCalledWith(['CSS value for ', document.body, ' with params ', params, ' is empty']);
+        expect(console.error).toHaveBeenCalledWith(['Cannot parse JSON from ', <body>...</body>, ' with params ', Object({ cssProperty: 'stringsMap', debug: true }) ]);
         expect(json).toEqual({});
     });
 

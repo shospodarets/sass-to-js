@@ -22,9 +22,42 @@
     var pureJsJson = sassToJs(document.body);
     var jQueryJson = $(document.body).sassToJs();
     var angularJson = angular.element(document.body).sassToJs();
+    var expectedObject = {
+        "stringsMap": {
+            "stringWithQuotes": "string",
+            "stringWithDoubleQuotes": "string",
+            "stringWithoutQuotes": "string",
+            "stringTrue": "true",
+            "stringFalse": "false",
+            "pixels": "480px",
+            "percents": "4%"
+        },
+        "colorMap": {"colorHexShort": "#f00", "colorHex": "#ff0000", "colorRgba": "rgba(255,0,0,0.5)"},
+        "numberMap": {"int": 10, "positiveNum": 4.7, "negativeNum": -43.67},
+        "othersMap": {"boolean": true, "nulls": null},
+        "mapOfMaps": {
+            "map": {"prop1": 1, "prop2": 2, "prop3": 3},
+            "map-nested": {"prop1": {"prop2": [1, 2, {"prop3": "test"}]}},
+            "map-full": {
+                "prop1": [1, 2, {"prop12": 1}],
+                "prop2": ["#ff0", false, {"prop21": 1, "prop22": "string2"}],
+                "prop3": [2, 3, 4, "string3"]
+            }
+        },
+        "listMap": {
+            "numbers": [1, 2, 3],
+            "strings": ["string1", "string2"],
+            "booleans": [true, false],
+            "cssValuesList": ["1.5em", "1em", 0, "2em"],
+            "listCommaSeparated": ["item-1", "item-2", "item-3"],
+            "withPodLists": [["1px", "2px"], ["5px", "6px"]],
+            "nestedList": ["a", "b", ["c", "d", "e", ["f", "g"], "h"], "i"]
+        }
+    }
     if (
-            JSON.stringify(pureJsJson) === JSON.stringify(jQueryJson) &&
-            JSON.stringify(pureJsJson) === JSON.stringify(angularJson)
+        JSON.stringify(pureJsJson) === JSON.stringify(jQueryJson) &&
+        JSON.stringify(pureJsJson) === JSON.stringify(angularJson) &&
+        JSON.stringify(pureJsJson) === JSON.stringify(expectedObject)
     ) {
         console.log('All JSON objects are identical');
     } else {

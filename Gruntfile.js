@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
@@ -48,13 +50,16 @@ module.exports = function (grunt) {
             src: '<%= paths.js %>/dist/*.js',
             options: {
                 vendor: [
+                    'node_modules/grunt-contrib-jasmine/.jasmine/latest/lib/jasmine-core/boot0.js',
+                    'node_modules/grunt-contrib-jasmine/.jasmine/latest/lib/jasmine-core/boot1.js',
                     'node_modules/jquery/dist/jquery.min.js',
-                    'node_modules/angular/angular.min.js'
+                    'node_modules/jquery/dist/jquery.min.js',
+                    'node_modules/angular/angular.min.js',
                 ],
                 helpers: '<%= paths.test %>/jasmine/helpers/**/*.js',
                 styles: '<%= paths.test %>/css/**/*.css',
                 specs: '<%= paths.test %>/jasmine/specs/**/*.js',
-                outfile: 'node_modules/grunt-contrib-jasmine/_SpecRunner.html'
+                outfile: 'node_modules/grunt-contrib-jasmine/_SpecRunner.html',
             }
         },
 
@@ -67,7 +72,10 @@ module.exports = function (grunt) {
                     dest: '<%= paths.test %>/css',
                     ext: '.css'
                 }]
-            }
+            },
+            options: {
+                implementation: sass,
+            },
         },
 
         uglify: {
