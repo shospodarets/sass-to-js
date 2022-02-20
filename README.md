@@ -25,13 +25,7 @@ You can use it e.g. for passing data from Sass to JS like:
 
 ## Install
 
-Library is available via **bower**:
-
-```bash
-bower install sass-to-js --save
-```
-
-as  **npm module**:
+Library is available as a **npm module**:
 
 ```bash
 npm install sass-to-js --save
