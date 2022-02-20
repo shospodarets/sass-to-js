@@ -9,7 +9,7 @@ describe("Getting JSON using AngularJS", function () {
             angular.element(testEl).sassToJs()
         )
             .toEqual(
-            {colorHexShort: "#f00", colorHex: "#ff0000", colorRgba: "rgba(255,0,0,0.5)"}
+            {colorHexShort: "#f00", colorHex: "#ff0000", colorRgba: "rgba(255, 0, 0, 0.5)"}
         );
     });
 

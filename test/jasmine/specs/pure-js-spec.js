@@ -10,7 +10,7 @@ describe("Getting JSON using pure JavaScript", function () {
             sassToJs(testEl)
         )
             .toEqual(
-            {colorHexShort: "#f00", colorHex: "#ff0000", colorRgba: "rgba(255,0,0,0.5)"}
+            {colorHexShort: "#f00", colorHex: "#ff0000", colorRgba: "rgba(255, 0, 0, 0.5)"}
         );
     });
 
@@ -46,7 +46,7 @@ describe("Getting JSON using pure JavaScript", function () {
             sassToJs(testEl, {pseudoEl: '::after'}).value
         )
             .toEqual(
-            {colorHexShort: "#f00", colorHex: "#ff0000", colorRgba: "rgba(255,0,0,0.5)"}
+            {colorHexShort: "#f00", colorHex: "#ff0000", colorRgba: "rgba(255, 0, 0, 0.5)"}
         );
     });
 });

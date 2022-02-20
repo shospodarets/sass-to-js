@@ -1,7 +1,7 @@
 {
   "title": "sass-to-js",
   "name": "sass-to-js",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Library to pass Sass variables via CSS to JavaScript",
   "repository": {
     "type": "git",

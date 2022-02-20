@@ -17,7 +17,7 @@ describe("Test getting JSON from <body/> CSS", function () {
         // of the properties in Object (it's not guaranteed according the JS spec)
         var expected = {
             'stringsMap': {"stringWithQuotes": "string", "stringWithDoubleQuotes": "string", "stringWithoutQuotes": "string", "stringTrue": "true", "stringFalse": "false", "pixels": "480px", "percents": "4%"},
-            'colorMap': {"colorHexShort": "#f00", "colorHex": "#ff0000", "colorRgba": "rgba(255,0,0,0.5)"},
+            'colorMap': {"colorHexShort": "#f00", "colorHex": "#ff0000", "colorRgba": "rgba(255, 0, 0, 0.5)"},
             'numberMap': {"int": 10, "positiveNum": 4.7, "negativeNum": -43.67},
             'othersMap': {"boolean": true, "nulls": null},
             'mapOfMaps': {"map": {"prop1": 1, "prop2": 2, "prop3": 3}, "map-nested": {"prop1": {"prop2": [1, 2, {"prop3": "test"}]}}, "map-full": {"prop1": [1, 2, {"prop12": 1}], "prop2": ["#ff0", false, {"prop21": 1, "prop22": "string2"}], "prop3": [2, 3, 4, "string3"]}},
